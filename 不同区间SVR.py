@@ -217,7 +217,9 @@ Xtrain, Xtest, Ytrain, Ytest = train_test_split(b_dn, depth, test_size=0.1, rand
 
 # SVR
 print('=' * 10, 'SVR_all', '=' * 10)
-regrSVR = SVR(kernel="rbf", C=1000, degree=3, epsilon=0.5, cache_size=20000).fit(Xtrain, Ytrain)
+regrSVR = SVR(kernel=""
+                     "."
+                     "rbf", C=1000, degree=3, epsilon=0.5, cache_size=20000).fit(Xtrain, Ytrain)
 Yhat_SVR = regrSVR.predict(Xtrain)
 Y_SVRtest = regrSVR.predict(Xtest)
 print('训练集R^2: %f' % regrSVR.score(Xtrain, Ytrain))
