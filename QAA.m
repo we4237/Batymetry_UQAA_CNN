@@ -21,14 +21,14 @@ Rrs660=R./200000;
 
 c=zeros(row,col);
 ag440=zeros(row,col);
-%% QAA_v5算法实现
-   %计算rrs
+%% QAA_v5绠楁硶瀹炵幇
+   %璁＄畻rrs
 
    rrs485=Rrs485./(0.52+1.7*Rrs485);
    rrs555=Rrs555./(0.52+1.7*Rrs555);
    rrs660=Rrs660./(0.52+1.7*Rrs660);
    
-   %计算u
+   %璁＄畻u
     g0=0.08945;
     g1=0.1247; 
     u485=((g0*g0+4.0*g1*rrs485).^(1.0/2.0)-g0)/(2.0*g1);
@@ -41,7 +41,7 @@ ag440=zeros(row,col);
         for j=1:col
                       
             Rrs=[u485(i,j),u555(i,j),u660(i,j)];
-%             %保存为mat格式
+%             %淇濆瓨涓簃at鏍煎紡
             save('Rrs.mat','Rrs')
            if Rrs(1)==0
            c(i,j)=0;
